@@ -2,12 +2,13 @@
 
 ## Problem Statement
 
-
+Hotels often struggle with managing room availability, bookings, and customer records using manual or fragmented systems. This leads to inefficiencies, double bookings, and poor customer experience.  
 
 ## Proposed Solution
 
-Develop a lightweight, modular Hotel Rooms Management System that centralises room inventory, customer data, and booking operations. The system will streamline daily operations, reduce human error, and provide a foundation for future enhancements like reporting and payment tracking.
+This project introduces a web-based Hotel Rooms Management System that centralises room availability, customer records, and booking operations into one streamlined platform. Built with Python, Flask, and SQLite, the system is designed with modular architecture to ensure clarity, maintainability, and scalability.  
 
+Staff can efficiently manage reservations, update room statuses, and generate billing information through a simple, user-friendly interface. The solution reduces human error, improves operational efficiency, and provides a solid foundation for future enhancements such as reporting, payment tracking, and role-based access control.
 
 ## Key Features
 
@@ -16,7 +17,6 @@ Develop a lightweight, modular Hotel Rooms Management System that centralises ro
 - **Booking System**: Book rooms with check-in/check-out dates and prevent double bookings.
 - **Billing**: Automatically calculate total cost based on stay duration and room rate.
 - **Admin Dashboard**: View all bookings, search/filter data, and manage rooms.
-
 
 ## Technology Stack
 
