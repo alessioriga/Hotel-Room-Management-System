@@ -11,6 +11,25 @@
     {% endif %}
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">Hotel Room Management System</li>
+                <li><a href="{{ url_for('home_bp.home') }}">Home</a></li>
+                <li><a href="{{ url_for('reports_bp.reports') }}">Reports</a></li>
+                <li class="dropdown">
+                    <button aria-haspopup="true">Bookings </button>
+                    <ul>
+                        <li><a href="{{ url_for('search_bp.search') }}">Search Bookings</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    </main>
 </body>
+
 </html>
