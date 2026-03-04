@@ -13,8 +13,17 @@
     <meta name="description" content="Hotel Room Management System: Manage bookings, arrivals, in-house guests, and room availability efficiently from a single dashboard.">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layout_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bookings_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reports_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='b_details_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='search_style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     
 </head>
+
 <body>
+
     <header>
         <nav>
             <ul>
@@ -26,7 +35,7 @@
                     <ul>
                         <li><a href="{{ url_for('search_bp.search') }}">Search Bookings</a></li>
                     </ul>
-                </li>
+                </li>  
             </ul>
         </nav>
     </header>
