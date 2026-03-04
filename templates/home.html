@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Booking System</h1>
+<h2>Hello {{ session['account_name'] }}!</h2>
+<p>To end your session, click <a href="/logout">Log Out.</a></p>
+<ul class="home-list">
+    <li class="home-card">
+        <a href="{{ url_for('arrivals_bp.arrivals') }}" class="card-link">
+            <h3>Arrivals</h3>
+            <img src="/static/images/Arrivals.png" alt="Arrivals">
+            <p>People: {{ arrivals_people }}</p>
+            <p>Expected Arrivals: {{ arrivals_bookings }}</p>
+        </a>
+    </li>
+
+    <li class="home-card">
+        <a href="{{ url_for('in_house_bp.in_house') }}" class="card-link">
+            <h3>In house (Occupied)</h3>
+            <img src="/static/images/In_house.png" alt="In hotel">
+            <p>Rooms: {{ in_house_rooms }}</p>
+            <p>People: {{ in_house_people }}</p>
+        </a>
+    </li>
+
+    <li class="home-card room-summary">
+        <a href="#in_house" class="card-link">
+            <h3>Rooms Availability Summary</h3>
+            <p>Available: {{ room_summary_available }}</p>
+            <p>Sold: {{ room_summary_sold }}</p>
+            <p>Total: {{ room_summary_total }}</p>
+        </a>
+    </li>
+</ul>
+{% endblock content%}
