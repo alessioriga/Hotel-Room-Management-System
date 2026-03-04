@@ -19,6 +19,7 @@ def createUserTable():
     connection.close()
     print("User table created successfully.")
 
+
 def createHotelTable():
     connection = db.connect('hotel_bookings.db')
     cursor = connection.cursor()
@@ -117,3 +118,23 @@ def createHotelTable():
     connection.commit()
     connection.close()
     print("Hotel bookings tables created successfully.")
+
+
+def insertValueUser():
+    connection = db.connect("admin.db")
+    cursor = connection.cursor()
+
+    users = [
+        ("Admin", "admin", "1234"),
+        ("John", "john", "5678")
+    ]
+
+    #Adds a user to the Users only if does not already exist (so there are not duplicate entries)
+    cursor.executemany(
+        "INSERT OR IGNORE INTO Users (account_name, username, password) VALUES (?, ?, ?)",
+        users
+    )
+
+    connection.commit()
+    connection.close()
+    print("Users added successfully.")
