@@ -15,7 +15,6 @@ Staff can efficiently manage reservations, update room statuses, and generate bi
 - **Room Management**: Add, update, and track room details (type, price, availability).
 - **Customer Management**: Store customer information and link them to bookings.
 - **Booking System**: Check-in/check-out bookings and prevent to assign rooms twice.
-- **Admin Dashboard**: View all bookings, search/filter data, and manage rooms.
 
 ## Technology Stack
 
