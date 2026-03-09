@@ -23,10 +23,10 @@ Staff can efficiently manage reservations, room assignment on check-in, and gene
 * **Database:** SQLite (via Python standard library `sqlite3`).
 * **Version Control:** Git Hub for source code management.
 
-## Project Structure (example)
+## Project Structure
 
 - `app.py` – application entry point
-- `routes/` – Flask route blueprints (e.g. `arrivals.py`)
+- `routes/` – Flask route blueprints (e.g. `arrivals.py`, `home.py`)
 - `db/` – database connection and repository functions
 - `auth/` – authentication logic and decorators
 - `templates/` – Jinja2 HTML templates
