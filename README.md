@@ -20,9 +20,18 @@ Staff can efficiently manage reservations, update room statuses, and generate bi
 ## Technology Stack
 
 * **Frontend:** HTML5, CSS for structuring and styling the user interface.
-* **Backend:** Python with Flask as web framework.
-* **Database:** *SQLite for lightweight, file-based data storage.
+* **Backend:** Python 3.10+ with Flask as web framework.
+* **Database:** SQLite (via Python standard library `sqlite3`).
 * **Version Control:** Git Hub for source code management.
+
+## Project Structure (example)
+
+- `app.py` – application entry point
+- `routes/` – Flask route blueprints (e.g. `arrivals.py`)
+- `db/` – database connection and repository functions
+- `auth/` – authentication logic and decorators
+- `templates/` – Jinja2 HTML templates
+- `static/` – CSS/assets
 
 ## Project Links
 
