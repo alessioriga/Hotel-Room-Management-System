@@ -17,7 +17,10 @@ Hotels often struggle with managing room availability, bookings, and customer re
 
 ## Proposed Solution
 
- This project introduces a web-based Hotel Rooms Management System that centralises room availability, customer records, and booking operations into one streamlined platform. Built with Python, Flask, and SQLite, the system is designed with modular architecture to ensure clarity, maintainability, and scalability. Staff can efficiently manage reservations, room assignment on check-in, and generate rooms report through a simple, user-friendly interface. The solution reduces human error, improves operational efficiency, and provides a solid foundation for future enhancements such as reporting, payment tracking, and role-based access control.
+ This project introduces a web-based Hotel Rooms Management System that centralises room availability, customer records, and booking operations into one streamlined platform. 
+ Built with Python, Flask, and SQLite, the system is designed with modular architecture to ensure clarity, maintainability, and scalability. 
+ Staff can efficiently manage reservations, room assignment on check-in, and generate rooms report through a simple, user-friendly interface. 
+ The solution reduces human error, improves operational efficiency, and provides a solid foundation for future enhancements such as reporting, payment tracking, and role-based access control.
 
 ---
 
