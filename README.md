@@ -9,17 +9,13 @@ A **Flask-based web application** for managing hotel room bookings, arrivals, an
 
 ---
 
-## Problem Statement
+# Overview
 
-Hotels often struggle with managing room availability, bookings, and customer records using manual or fragmented systems. This leads to inefficiencies, double bookings, and poor customer experience. 
+Hotels often struggle to manage room availability, bookings, and customer records when using manual processes or disconnected systems. This can lead to inefficiencies, double bookings, and poor customer experience.
 
----
+This project provides a **centralised Hotel Room Management System** built with **Python, Flask, and SQLite**. The application allows hotel staff to manage reservations, assign rooms during check-in, and track guests currently staying in the hotel.
 
-## Proposed Solution
-
-This project introduces a web-based Hotel Rooms Management System that centralises room availability, customer records, and booking operations into one streamlined platform. Built with Python, Flask, and SQLite, the system is designed with modular architecture to ensure clarity, maintainability, and scalability.  
-
-Staff can efficiently manage reservations, room assignment on check-in, and generate room reports through a simple, user-friendly interface. The solution reduces human error, improves operational efficiency, and provides a solid foundation for future enhancements such as reporting, payment tracking, and role-based access control.
+The system uses a **modular architecture**, making the codebase easier to maintain and extend for future improvements.
 
 ---
 
