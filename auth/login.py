@@ -5,13 +5,30 @@ from db.connection import login_db_connection
 login_bp = Blueprint('login_bp', __name__)
 
 @login_bp.route('/login', methods = ['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+def login() -> object:
+    """
+    Handle user authentication.
 
-        connection = login_db_connection()
-        user = connection.execute('SELECT * FROM Users WHERE username = ? AND password = ?', (username, password)).fetchone()
+    GET:
+        Displays the login page.
+
+    POST:
+        Validates the username and password against the Users table.
+        If credentials are correct, the user session is created and the
+        user is redirected to the home page.
+
+    Returns:
+        object: A rendered HTML template or a redirect response.
+    """
+    if request.method == 'POST':
+        username: str = request.form['username']
+        password: str = request.form['password']
+
+        connection: object = login_db_connection()
+        user: object = connection.execute(
+            'SELECT * FROM Users WHERE username = ? AND password = ?', (username, password)
+        ).fetchone()
+
         connection.close()
 
         if user:
@@ -21,11 +38,18 @@ def login():
         else:
             return render_template('login.html', error="Incorrect username or password")
  
-    # When the user first opens /login in the browser, they are doing a GET request.
-    # request.method == 'POST' is False, because they haven't submitted the form yet.
     return render_template('login.html')
 
 @login_bp.route('/logout')
-def logout():
+def logout() -> object:
+    """
+    Log the user out of the application.
+
+    Removes the username from the session and redirects
+    the user back to the login page.
+
+    Returns:
+        object: Redirect response to the login page.
+    """
     session.pop('username', None)
     return redirect(url_for('login_bp.login'))
