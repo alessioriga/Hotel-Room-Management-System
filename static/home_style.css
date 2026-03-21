@@ -1,0 +1,66 @@
+.home-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 0;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.home-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    flex: 0 1 200px;
+    max-width: 250px;
+}
+
+.home-card .room-summary {
+    flex: 0 1 350px;
+    max-width: 350px;
+}
+
+.home-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.home-card:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.home-card img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.home-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.home-card p {
+    font-size: 0.95rem;
+    color: #313131;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-link:focus-visible {
+    outline: 2px solid #ddd;
+    outline-offset: 4px;
+}
