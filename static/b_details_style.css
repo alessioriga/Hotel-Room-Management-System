@@ -1,0 +1,120 @@
+/* ----------------------------- */
+/* BOOKING / CHECK-IN FORM       */
+/* ----------------------------- */
+
+.booking-form {
+  max-width: 750px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Field groups */
+
+.booking-form fieldset {
+  border: none;
+  padding: 1;
+  margin-bottom: 1.3rem;
+}
+
+/* Labels */
+
+.booking-form label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* Inputs & Select */
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  color: #111827;
+  background-color: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #314c73;
+  box-shadow: 0 0 0 2px rgba(81, 63, 244, 0.15);
+}
+
+/* Readonly fields */
+
+.booking-form input[readonly] {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: default;
+}
+
+/* File input */
+
+.booking-form input[type="file"] {
+  padding: 0.4rem;
+  background-color: #f9fafb;
+}
+
+/* Submit Button */
+
+.booking-form button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.9rem;
+  background-color: #d6334f;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.booking-form button:hover {
+  background-color: #b91c3b;
+}
+
+.booking-form button:active {
+  transform: scale(0.98);
+}
+
+/* Two column layout (optional rows) */
+
+.booking-form .two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.booking-form .three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.booking-form footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.booking-form footer a {
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.booking-form footer a:hover {
+  text-decoration: underline;
+}
