@@ -1,0 +1,88 @@
+/* =========================
+   SEARCH PAGE
+========================= */
+
+.search-box {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+
+/* =========================
+   SEARCH FORM
+========================= */
+
+.search-box form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-box label {
+    width: 100%;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 250px;
+
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    font-size: 0.95rem;
+    background-color: #fafafa;
+
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #314c73;
+    box-shadow: 0 0 0 3px rgba(81, 63, 244, 0.15);
+}
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.search-box button {
+    padding: 0.6rem 1.2rem;
+
+    background-color: #d6334f;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.search-box button:hover {
+    background-color: #b91c3b;
+}
+
+.search-box button:active {
+    transform: translateY(1px);
+}
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.search-box + p {
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 1rem;
+}
