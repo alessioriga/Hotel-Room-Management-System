@@ -7,7 +7,7 @@
     <li class="home-card">
         <a href="{{ url_for('arrivals_bp.arrivals') }}" class="card-link">
             <h3>Arrivals</h3>
-            <img src="/static/images/Arrivals.png" alt="Arrivals">
+            <img src="/static/images/arrivals.png" alt="Arrivals">
             <p>People: {{ arrivals_people }}</p>
             <p>Expected Arrivals: {{ arrivals_bookings }}</p>
         </a>
@@ -16,7 +16,7 @@
     <li class="home-card">
         <a href="{{ url_for('in_house_bp.in_house') }}" class="card-link">
             <h3>In house (Occupied)</h3>
-            <img src="/static/images/In_house.png" alt="In hotel">
+            <img src="/static/images/in_house.png" alt="In hotel">
             <p>Rooms: {{ in_house_rooms }}</p>
             <p>People: {{ in_house_people }}</p>
         </a>
@@ -25,7 +25,7 @@
     <li class="home-card room-summary">
         <a class="card-link">
             <h3>Rooms Availability Summary</h3>
-            <img src="/static/images/Summary.png" alt="Rooms Availability Summary">
+            <img src="/static/images/summary.png" alt="Rooms Availability Summary">
             <p>Available: {{ room_summary_available }}</p>
             <p>Sold: {{ room_summary_sold }}</p>
             <p>Total: {{ room_summary_total }}</p>
