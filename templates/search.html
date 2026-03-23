@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Search Bookings</h1>
+
+<section class="search-box">
+
+    <form method="POST">
+
+        <label for="keyword">
+            Search by Name, Surname, Phone, or Booking Number
+        </label>
+
+        <input type="text" id="keyword" name="keyword" placeholder="Enter search..." value="{{ keyword }}" required>
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+</section>
+
+
+{% if results %}
+
+<h2>Results</h2>
+
+<table class="bookings-table">
+
+    <thead>
+        <tr>
+            <th>Booking #</th>
+            <th>Customer</th>
+            <th>Phone</th>
+            <th>Room</th>
+            <th>Type</th>
+            <th>Guests</th>
+            <th>Arrival</th>
+            <th>Departure</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for b in results %}
+
+        <tr>
+
+            <td>
+
+                {% if b['booking_status'] == 'Arrival' %}
+                <a href="{{ url_for('arrivals_bp.view_booking', booking_id=b['id']) }}">
+                    {{ b['booking_number'] }}
+                </a>
+                {% elif b['booking_status'] == 'Checked-in' %}
+                <a href="{{ url_for('in_house_bp.checkout_booking', booking_id=b['id']) }}">
+                    {{ b['booking_number'] }}
+                </a>
+                {% endif %}
+            </td>
+
+            <td>{{ b['customer_name'] }}</td>
+            <td>{{ b['phone'] }}</td>
+            <td>{{ b['room_number'] or "-" }}</td>
+            <td>{{ b['room_type'] or "-" }}</td>
+            <td>{{ b['number_guests'] }}</td>
+            <td>{{ b['check_in_date'] }}</td>
+            <td>{{ b['check_out_date'] }}</td>
+            <td>{{ b['booking_status'] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% elif keyword %}
+
+<p>No results found.</p>
+
+{% endif %}
+
+{% endblock %}
