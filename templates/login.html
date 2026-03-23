@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Management System</title>
+    <link rel="icon" type="image/x-icon" href="/app/static/images/favicon.png">
+    <meta name="description" content="Hotel Room Management System: Manage bookings, arrivals, in-house guests, and room availability efficiently from a single dashboard.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_style.css') }}">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Hotel Room Management System</h1>
+        </header>
+        <section class="login-container" aria-labelledby="login-title">
+
+            <h2 id="login-title">Sign in to continue</h2>
+
+            {% if error %}
+            <p class="login-error" role="alert">{{ error }}</p>
+            {% endif %}
+            <form method="POST">
+                <fieldset>
+                    <legend>Enter your details to log in to the system</legend>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
