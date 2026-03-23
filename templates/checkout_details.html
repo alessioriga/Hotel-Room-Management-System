@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Booking Details</h1>
+<a class="back-link" href="{{ url_for('in_house_bp.in_house') }}">← Back to In House</a>
+<section class="booking-form">
+
+    <form method="POST">
+        
+        <section class="three-cols">
+
+            <fieldset>
+                <legend></legend>
+                <label for="booking_number">Booking Number</label>
+                <input type="text" id="booking_number" name="booking_number" value="{{ booking['booking_number'] }}" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" value="{{ booking['customer_name'] }}" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+                <label for="guest">Guests</label>
+                <input type="text" id="guest" value="{{ booking['number_guests'] }}" readonly>
+            </fieldset>
+
+        </section>
+
+        <section class="two-cols">
+
+            <fieldset>
+                <legend></legend>
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" value="{{ booking['address'] }}" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" value="{{ booking['phone'] }}" readonly>
+            </fieldset>
+
+        </section>
+
+        <section class="two-cols">
+
+            <fieldset>
+                <legend></legend>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="{{ booking['email'] }}" readonly>
+            </fieldset>
+            
+            <fieldset>
+                <legend></legend>
+                <label for="room">Room</label>
+                <input type="text" id="room" name="room" value="{{ booking['room_number'] }}" readonly>
+            </fieldset>
+
+        </section>
+
+
+        <section class="three-cols">
+
+            <fieldset>
+                <legend></legend>
+                <label for="room_type">Room Type</label>
+                <input type="text" id="room_type" name="room_type" value="{{ booking['room_type'] }}" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+                <label for="price_per_night">Price/night</label>
+                <input type="text" id="price_per_night" value="£ {{ booking['price_per_night'] }}" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+                <label for="total">Total Paid</label>
+                <input type="text" id="total" value="£ {{ booking['total_amount'] }}" readonly>
+            </fieldset>
+
+        </section>
+
+        <section class="three-cols">
+
+            <fieldset>
+                <legend></legend>
+                <label for="arrival">Arrival</label>
+                <input type="text" id="arrival" value="{{ booking['check_in_date'] }}" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+                <label for="departure">Departure</label>
+                <input type="text" id="departure" value="{{ booking['check_out_date'] }}" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend></legend>
+                <label for="nights">Nights</label>
+                <input type="text" id="nights" value="{{ booking['number_of_nights'] }}" readonly>
+            </fieldset>
+
+        </section>
+
+        <button type="submit">
+            CHECK OUT GUEST
+        </button>
+
+    </form>
+
+    
+
+</section>
+
+{% endblock %}
