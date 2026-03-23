@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>In House</h1>
+
+<a class="back-link" href="{{ url_for('home_bp.home') }}">← Back to Home</a>
+
+<table class="bookings-table">
+    <thead>
+        <tr>
+            <th>Confirmation Number</th>
+            <th>Customer</th>
+            <th>Room</th>
+            <th>Room Type</th>
+            <th>Guests</th>
+            <th>Arrival</th>
+            <th>Departure</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for b in bookings %}
+        <tr>
+            <td>
+                <a href="{{ url_for('in_house_bp.checkout_booking', booking_id=b['id']) }}">
+                    {{ b['booking_number'] }}
+                </a>
+            </td>
+            <td>{{ b['customer_name'] }}</td>
+            <td>{{ b['room_number'] }}</td>
+            <td>{{ b['room_type'] }}</td>
+            <td>{{ b['number_guests'] }}</td>
+            <td>{{ b['check_in_date'] }}</td>
+            <td>{{ b['check_out_date'] }}</td>
+            <td>{{ b['booking_status'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
