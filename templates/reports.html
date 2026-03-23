@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Room Overview</h1>
+
+<button onclick="window.print()" class="print-btn">PRINT REPORT</button>
+
+
+<table class="room-table">
+
+    <thead>
+        <tr>
+            <th>Room</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Guest</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for room in rooms %}
+        <tr>
+            <td>{{ room["room_number"] }}</td>
+            <td>{{ room["type_name"] }}</td>
+            <td>{{ room["status"] }}</td>
+            <td>{{ room["guest_name"] }}</td>
+            <td>{{ room["check_in_date"] }}</td>
+            <td>{{ room["check_out_date"] }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock content %}
