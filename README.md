@@ -76,8 +76,6 @@ For testing purposes:
 - Role-based access control (admin/staff)
 - Payment tracking
 - Reporting and analytics
-- REST API support
-- Docker deployment
 
 ## Project Links
 
