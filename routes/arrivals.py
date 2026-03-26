@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 from auth.decorators import login_required
 from db.repository import *
 from db.resources.dbUtils import *
-
+from sqlite3 import Connection
 
 arrivals_bp = Blueprint("arrivals_bp", __name__)
 
@@ -44,7 +44,7 @@ def view_booking(booking_id: int) -> str:
     # Include current room if the booking already has it assigned
     # Only if it is still marked as Available (status_id = 1)
     if booking["room_id"] is not None:
-        connection = hotel_db_connection()
+        connection: Connection = hotel_db_connection()
         room_status: dict | None = connection.execute("""
             SELECT room_status_id
             FROM Room
