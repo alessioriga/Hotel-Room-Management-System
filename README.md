@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black)
 ![Database](https://img.shields.io/badge/Database-SQLite-green)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Licence](https://img.shields.io/badge/Licence-MIT-lightgrey)
 
 A **Flask-based web application** for managing hotel room bookings, arrivals, and in-house guests through a simple web interface.
 
@@ -83,6 +83,6 @@ For testing purposes:
 * [Project Kanban Board](https://github.com/users/alessioriga/projects/3)
 * [Project Roadmap](https://github.com/users/alessioriga/projects/3/views/4)
 
-## License
+## Licence
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT Licence.
