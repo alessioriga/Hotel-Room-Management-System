@@ -85,7 +85,6 @@ nav li button:hover {
   z-index: 10;
 }
 
-/* Show dropdown on hover or focus */
 .dropdown:hover ul,
 .dropdown button:focus+ul {
   display: block;
@@ -104,7 +103,6 @@ nav li button:hover {
   background-color: #f3f4f6;
 }
 
-/* Dropdown button looks like nav link */
 nav li button {
   background: none;
   border: none;
@@ -117,7 +115,6 @@ nav li button {
   transition: background 0.2s ease;
 }
 
-/* Small ▼ arrow */
 nav li button::after {
   content: "▼";
   font-size: 0.6em;
