@@ -1,6 +1,4 @@
-/* ----------------------------- */
-/* BOOKING / CHECK-IN FORM       */
-/* ----------------------------- */
+/* BOOKING / CHECK-IN FORM */
 
 .booking-form {
   max-width: 750px;
@@ -90,7 +88,7 @@
   transform: scale(0.98);
 }
 
-/* Two column layout (optional rows) */
+/* Two column layout */
 
 .booking-form .two-cols {
   display: grid;
