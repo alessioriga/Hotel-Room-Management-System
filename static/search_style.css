@@ -1,6 +1,4 @@
-/* =========================
-   SEARCH PAGE
-========================= */
+/* SEARCH PAGE */
 
 .search-box {
     background-color: #ffffff;
@@ -10,10 +8,7 @@
     margin-bottom: 2rem;
 }
 
-
-/* =========================
-   SEARCH FORM
-========================= */
+/* SEARCH FORM */
 
 .search-box form {
     display: flex;
@@ -49,9 +44,7 @@
     box-shadow: 0 0 0 3px rgba(81, 63, 244, 0.15);
 }
 
-/* =========================
-   SEARCH BUTTON
-========================= */
+/* SEARCH BUTTON */
 
 .search-box button {
     padding: 0.6rem 1.2rem;
@@ -77,9 +70,7 @@
     transform: translateY(1px);
 }
 
-/* =========================
-   EMPTY MESSAGE
-========================= */
+/* EMPTY MESSAGE */
 
 .search-box + p {
     font-size: 1rem;
